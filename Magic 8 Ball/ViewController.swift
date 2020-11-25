@@ -9,10 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var magicEightBallImageView: UIImageView!
     
-    let ballArray = [#imageLiteral(resourceName: "ball1.png"),#imageLiteral(resourceName: "ball2.png"),#imageLiteral(resourceName: "ball3.png"),#imageLiteral(resourceName: "ball4.png"),#imageLiteral(resourceName: "ball5.png")]
-
-
-
+    let ballArray = [#imageLiteral(resourceName: "ball2"),#imageLiteral(resourceName: "ball1"),#imageLiteral(resourceName: "ball5"),#imageLiteral(resourceName: "ball3"),#imageLiteral(resourceName: "ball4")]
+    
+    @IBAction func shakeButtonPressed(_ sender: UIButton) {
+        magicEightBallImageView.image = ballArray.randomElement()
+    }
 }
 
